@@ -1,0 +1,222 @@
+<head>
+    <title>Recursion Codes</title>
+    <link rel="icon" href="logoicon.png" type="image/icon type">
+</head>
+<style>
+    
+    @import url("scanlines.css");
+    
+    body {
+        margin:0;
+        overflow: hidden;
+        font-family:"Segoe UI";
+        background-color:gray;
+    }
+    
+    .icon{
+        height:4.5vh;
+        width:7vh;
+        cursor:pointer;
+        background-size:contain;
+        background-repeat: no-repeat;
+        background-position:center;
+        color:#fff;
+        left:2vh;
+        top:2vh;
+        margin:0;
+    }
+    .icon:nth-child(n+4){
+        top:13vh;
+    }
+    .icontext{
+        bottom:-5vh;
+        position:relative;
+        font-size:1.5vh;
+        text-align:center;
+        width:7vh;
+    }
+    .folder{
+        background-image:url("folder.png");
+    }
+    
+    .notes{
+        background-image:url("notepad.png");
+        
+    }
+    .draggable{position:absolute;}
+    
+    .windowtitle{
+        text-align:center;
+        bottom:-2vh;
+        left:1vh;
+        position:absolute;
+        font-size:1.5vh;
+        color:#fff;
+        text-shadow: #000 .1vh 0 .5vh;
+    }
+    
+    .header{
+        width:100%;
+        border: 2px inset #000;
+        box-sizing: border-box;
+        height:2.5vh;
+        font-size:1.5vh;
+        cursor:pointer;
+        border:solid .2vh black;
+        box-sizing: border-box;
+    }
+    
+    #imc{
+        background-image:url(imccorp.png);
+        width:40vh;
+        height:40vh;
+        background-size:contain;
+        position:absolute;
+        left:50%;
+        top:50%;
+        margin-left:-20vh;
+        margin-top:-20vh;
+    }
+    .closebutton{
+        font-size:1.9vh;
+        text-align:right;
+        top:0vh;
+        right:0vh;
+        position:absolute;
+        font-family:arial;
+        margin-top:0vh;
+        margin-right:0vh;
+        border: .2vh solid #000
+    }
+    
+    stat{
+        float:right;
+        display:inline;
+    }
+    
+    img{
+        width:12.01vh;
+        height:12.01vh;
+        display:inline;
+        object-fit:cover;
+    }
+    
+    .contentwindow{
+        width:40vh;
+        height:40vh;
+        position:absolute;
+        left:112vh;
+        top:50vh;
+        background-color:#DCDCDC;
+        display:none;
+        border:solid .2vh white;
+        box-sizing: border-box;
+        resize:both;
+        overflow:hidden;
+    }
+    p{
+        padding:1vh;
+        overflow:auto;
+        margin-top:0vh;
+        margin-left:-.2vh;
+        width:96%;
+        height:89%;
+    }
+    .windowheader{
+        margin-left:.5vh;
+    }
+    
+    .imagegrid{
+        display:flex;
+        flex-wrap:wrap;
+        align-items:center;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top:1vh; 
+        overflow:auto;
+        width: 100%;
+        height:93%;
+        row-gap:1vh;
+    }
+    
+</style>
+<body>
+    <div class="scanlines"></div>
+    <div id="imc"></div>
+    <div class="icon draggable notes" ondblclick="openwindow(stats)"><div class="icontext">Health Disclosure</div></div>
+    <div class="icon draggable folder" ondblclick="openwindow(gallery)"><div class="icontext">Images</div></div>
+    
+    <div class="draggable contentwindow" id="stats"><div id="statsheader" class="header"><font class="windowheader">Health Disclosure</font><div class="closebutton" id="statsclose" onclick="closewindow(stats)">&nbspX&nbsp</div></div>
+    <p>
+        Name : <stat><s>Renee</s> Wraith <s>Hope Blasey</s></stat><br>
+        Age : <stat>33</stat><br>
+        Sex : <stat>Female</stat><br>
+        Blood Type : <stat>O-</stat><br>
+        Demeanor : <stat><s>Personable</s> Distant</stat><br>
+        Height : <stat>5'4"</stat><br>
+        Hair Color : <stat>Raven</stat><br>
+        Eye Color : <stat><s>Brown</s> Luminescent</stat><br>
+        Occupation : <stat><s>Scientist</s> Legend</stat><br>
+        Next of Kin : <stat><a href="">None</a></stat><br>
+        <br>
+        The person above has agreed to waive all legal rights pertaining to Interstellar Manufacturing Corp© (IMC) voluntarily. In the case of bodily mutilation, mental distress, impairment, debilitation, loss of life, or stranding IMC will not be legally required to render assistance.<br><br>
+        The following experiments regarding Phase Shift Technology™ are to be kept discreet between Dr.Amer Singh, <s>Dr Renee Blasey</s> and IMC. This disclosure also serves the purpose of a Non Disclosure Agreement and Noncompete for the aforementioned person to not disclose any information on experiments as they are considered 
+        IMI trade secrets. Doing so will be subject to legal action.
+    </p>
+</div>
+
+
+
+<div class="contentwindow draggable" id="gallery"><div id="galleryheader"  class="header"><font class="windowheader">Images</font><div class="closebutton" id="imagesclose" onclick="closewindow(gallery)">&nbspX&nbsp</div></div>
+<div class="imagegrid">
+    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="wraithgall1.jpg"><img src="wraithgall1.jpg"></img></a><center>a.jpg</center></div>
+    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="wraithgall2.jpg"><img src="wraithgall2.jpg"></img></a><center>a.jpg</center></div>
+    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="wraithgall3.jpg"><img src="wraithgall3.jpg"></img></a><center>a.jpg</center></div>
+    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="wraithgall4.jpg"><img src="wraithgall4.jpg"></img></a><center>a.jpg</center></div>
+    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="wraithgall5.jpg"><img src="wraithgall5.jpg"></img></a><center>a.jpg</center></div>
+    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="wraithgall6.png"><img src="wraithgall6.png"></img></a><center>a.jpg</center></div>
+    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="wraithgall7.jpg"><img src="wraithgall7.jpg"></img></a><center>a.jpg</center></div>
+    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="wraithgall8.jpg"><img src="wraithgall8.jpg"></img></a><center>a.jpg</center></div>
+    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="wraithgall9.jpg"><img src="wraithgall9.jpg"></img></a><center>a.jpg</center></div>
+</div></div>
+
+<audio id="opensound" src="snap.wav"></audio>
+<audio id="closesound" src="snap2.mp3"></audio>
+<audio id="thememusic" src="wraiththeme.mp3"></audio>
+
+<script src="drag.js"></script>
+<script>
+    function openwindow(openwindow){
+        console.log(openwindow);
+        openwindow.style.display = "inline";
+        opensound.currentTime = 0;
+        opensound.play();
+        opensound.volume = .25;
+    }
+    function closewindow(window){
+        console.log(window);
+        window.style.display = "none";
+        closesound.currentTime = 0;
+        closesound.play();
+        closesound.volume = .25;
+    }
+    var playingmainsong = false;
+    var musicsound = document.getElementById("thememusic");
+    
+    function playmusic(){
+        musicsound.currentTime = 0;
+        musicsound.play();
+        if(playingmainsong === false){
+            musicsound.play();
+            playingmainsong = true;
+        }else{
+            musicsound.pause();
+            playingmainsong = false;
+        }
+        musicsound.volume = 0.15;
+    }
+    
+</script>
+</div>
+</body>
+
