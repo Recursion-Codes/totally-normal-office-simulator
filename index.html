@@ -4,7 +4,7 @@
 </head>
 <style>
     
-    @import url("scanlines.css");
+    @import url("bin/scanlines.css");
     
     body {
         margin:0;
@@ -36,11 +36,11 @@
         width:7vh;
     }
     .folder{
-        background-image:url("folder.png");
+        background-image:url("bin/folder.png");
     }
     
     .notes{
-        background-image:url("notepad.png");
+        background-image:url("bin/notepad.png");
         
     }
     .draggable{position:absolute;}
@@ -67,7 +67,7 @@
     }
     
     #imc{
-        background-image:url(imccorp.png);
+        background-image:url("bin/imccorp.png");
         width:40vh;
         height:40vh;
         background-size:contain;
@@ -169,22 +169,22 @@
 
 <div class="contentwindow draggable" id="gallery"><div id="galleryheader"  class="header"><font class="windowheader">Images</font><div class="closebutton" id="imagesclose" onclick="closewindow(gallery)">&nbspX&nbsp</div></div>
 <div class="imagegrid">
-    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="wraithgall1.jpg"><img src="wraithgall1.jpg"></img></a><center>a.jpg</center></div>
-    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="wraithgall2.jpg"><img src="wraithgall2.jpg"></img></a><center>a.jpg</center></div>
-    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="wraithgall3.jpg"><img src="wraithgall3.jpg"></img></a><center>a.jpg</center></div>
-    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="wraithgall4.jpg"><img src="wraithgall4.jpg"></img></a><center>a.jpg</center></div>
-    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="wraithgall5.jpg"><img src="wraithgall5.jpg"></img></a><center>a.jpg</center></div>
-    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="wraithgall6.png"><img src="wraithgall6.png"></img></a><center>a.jpg</center></div>
-    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="wraithgall7.jpg"><img src="wraithgall7.jpg"></img></a><center>a.jpg</center></div>
-    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="wraithgall8.jpg"><img src="wraithgall8.jpg"></img></a><center>a.jpg</center></div>
-    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="wraithgall9.jpg"><img src="wraithgall9.jpg"></img></a><center>a.jpg</center></div>
+    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="bin/wraithgall1.jpg"><img src="bin/wraithgall1.jpg"></img></a><center>a.jpg</center></div>
+    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="bin/wraithgall2.jpg"><img src="bin/wraithgall2.jpg"></img></a><center>a.jpg</center></div>
+    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="bin/wraithgall3.jpg"><img src="bin/wraithgall3.jpg"></img></a><center>a.jpg</center></div>
+    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="bin/wraithgall4.jpg"><img src="bin/wraithgall4.jpg"></img></a><center>a.jpg</center></div>
+    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="bin/wraithgall5.jpg"><img src="bin/wraithgall5.jpg"></img></a><center>a.jpg</center></div>
+    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="bin/wraithgall6.png"><img src="bin/wraithgall6.png"></img></a><center>a.jpg</center></div>
+    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="bin/wraithgall7.jpg"><img src="bin/wraithgall7.jpg"></img></a><center>a.jpg</center></div>
+    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="bin/wraithgall8.jpg"><img src="bin/wraithgall8.jpg"></img></a><center>a.jpg</center></div>
+    <div style="display:grid;"><a onclick="playclosesound()" target="_blank" href="bin/wraithgall9.jpg"><img src="bin/wraithgall9.jpg"></img></a><center>a.jpg</center></div>
 </div></div>
 
-<audio id="opensound" src="snap.wav"></audio>
-<audio id="closesound" src="snap2.mp3"></audio>
-<audio id="thememusic" src="wraiththeme.mp3"></audio>
+<audio id="opensound" src="bin/snap.wav"></audio>
+<audio id="closesound" src="bin/snap2.mp3"></audio>
+<audio id="thememusic" src="bin/wraiththeme.mp3"></audio>
 
-<script src="drag.js"></script>
+<script src="bin/drag.js"></script>
 <script>
     function openwindow(openwindow){
         console.log(openwindow);
